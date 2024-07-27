@@ -10,7 +10,7 @@
             <h1 class="pb-3 text-center">Create user</h1>
             <form class="card p-4 bg-light" method="post" action="{{route('users.store')}}">
                 @csrf
-                {{--                @method('POST')--}}
+                @method('POST')
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
                     <input value="{{old('name')}}" name="name" id="name" type="text" class="form-control @error('name') is-invalid @enderror" aria-describedby="name">
@@ -39,13 +39,13 @@
                     <div class="invalid-feedback" id="confirmPassword">{{$message}}</div>
                     @enderror
                 </div>
-                {{--                <div class="mb-3">--}}
-                {{--                    <label for="date" class="form-label">Create Date</label>--}}
-                {{--                    <input name="created_at" id="date" type="date" class="form-control @error('created_at') is-invalid @enderror" aria-describedby="date">--}}
-                {{--                    @error('created_at')--}}
-                {{--                    <div class="invalid-feedback" id="date">{{$message}}</div>--}}
-                {{--                    @enderror--}}
-                {{--                </div>--}}
+                             <div class="mb-3">
+                                <label for="date" class="form-label">Create Date</label>
+                                 <input name="created_at" id="date" type="date" class="form-control @error('created_at') is-invalid @enderror" aria-describedby="date">
+                                   @error('created_at')
+                                   <div class="invalid-feedback" id="date">{{$message}}</div>
+                                  @enderror
+                              </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </div>

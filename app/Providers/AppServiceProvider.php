@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 //use Illuminate\Support\Facades\Password;
-//use Illuminate\Support\Facades\Password;
+// use Illuminate\Support\Facades\Password;
 use Illuminate\Validation\Rules\Password;
 //use Illuminate\Contracts\Auth\PasswordBroker;
 
