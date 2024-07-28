@@ -11,8 +11,8 @@
         <div class="row card p-4" style="border-radius: 0; width: 100%">
             <h1 class="text-center">Users</h1>
 
-    <div class="row">
-    <div class="col-md-6">
+    <div class="row mb-2">
+    <div class="col-md-6 d-flex">
         <form action="{{route('users.create.dummy')}}" method="post">
             @csrf
             <button class="btn btn-success">Add dummy Data</button>
@@ -34,8 +34,7 @@
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
                     <th scope="col">Created Date</th>
-                    <th scope="col">Updated Date</th>
-                    <th scope="col">Update</th>
+                    <th scope="col">Edit</th>
                     <th scope="col">Delete</th>
                 </tr>
                 </thead>
@@ -47,7 +46,7 @@
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
                         <td>{{Carbon\Carbon::parse($user->created_at)->diffForHumans()}}</td>
-                       <td>{{Carbon\Carbon::parse($user->updated_at)->diffForHumans()}}</td>
+                       {{-- <td>{{Carbon\Carbon::parse($user->updated_at)->diffForHumans()}}</td> --}}
                         <td><a href="{{route('users.show', $user->id)}}" class="btn btn-success">Edit</a></td>
 
                         <td>
@@ -64,6 +63,14 @@
             </table>
         </div>
     </div>
+
+    
+    <div class="row mt-4">
+        {{$users->links()}}
+    </div>
+
+
+
 @endsection
 
 
