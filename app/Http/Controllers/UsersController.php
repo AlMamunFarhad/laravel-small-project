@@ -41,6 +41,8 @@ class UsersController extends Controller
 
         // $users = DB::select('select * from users where id > 10 order by id asc limit 20');
         $users = DB::table('users')->paginate(10);
+
+        // ->withPath('admin/users/index')->appends(['name'=> 'farhad']);
         
         // dd($users);
         // $users = DB::table('users')->get();

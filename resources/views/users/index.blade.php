@@ -65,8 +65,8 @@
     </div>
 
     
-    <div class="row mt-4">
-        {{$users->links()}}
+    <div class="row mt-5">
+        {{$users->links('partials.pagination')}}
     </div>
 
 
