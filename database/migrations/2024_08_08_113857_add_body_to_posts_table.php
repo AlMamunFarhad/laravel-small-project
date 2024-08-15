@@ -15,6 +15,14 @@ return new class extends Migration
             $table->foreignId('user_id')->after('id');
             $table->text('body')->after('title');
         });
+
+            // Schema::connection('sqlite2')->create('users_2', function(Blueprint $table) {
+    // $table->id();
+    // $table->string('name','100');
+    // $table->string('username', '100');
+    // $table->timestamps();
+
+    // });
     }
 
     /**
@@ -26,12 +34,6 @@ return new class extends Migration
             $table->dropColumn('user_id','body');
         });
 
-                   Schema::connection('sqlite2')->create('users', function(Blueprint $table) {
-               $table->id();
-               $table->string('name');
-               $table->string('username', '100');
-               $table->timestamps();
-           });
-   
+
     }
 };

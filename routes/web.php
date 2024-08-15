@@ -4,6 +4,18 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 use Illuminate\Http\Request;
 
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+// Route::get('/', function () {
+
+
+
+// // return view('welcome');
+
+   
+// });
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
