@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('posts_2', function (Blueprint $table) {
-            
-            $table->unique('username');
-            // $table->string('title', 255)->change();
+        Schema::table('posts', function (Blueprint $table) {
+      
+      $table->dropUnique('title');      
+      
         });
     }
 
@@ -23,9 +23,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('posts_2', function (Blueprint $table) {
+        Schema::table('posts', function (Blueprint $table) {
             
-            // $table->renameColumn('tit', 'title');
+
         });
     }
 };

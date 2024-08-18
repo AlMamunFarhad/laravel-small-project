@@ -13,6 +13,8 @@ use Faker\Factory;
 use Illuminate\Support\Str;
 
 
+
+
 class UsersController extends Controller
 {
     /**
@@ -157,9 +159,7 @@ class UsersController extends Controller
            $faker = Factory::create();
 
         for ($i = 0; $i < 100; $i++) { 
-            // code...
-       
-
+            
            DB::table('users')->insert([
 
              'name'=> $faker->name,

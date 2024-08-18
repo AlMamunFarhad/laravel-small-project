@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->foreignId('user_id')->after('id');
-            $table->text('body')->after('title');
-        });
+        // Schema::table('posts', function (Blueprint $table) {
+        //     $table->foreignId('user_id')->after('id');
+        //     $table->text('body')->after('title');
+        // });
 
             // Schema::connection('sqlite2')->create('users_2', function(Blueprint $table) {
     // $table->id();
@@ -30,9 +30,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->dropColumn('user_id','body');
-        });
+        // Schema::table('posts', function (Blueprint $table) {
+        //     $table->dropColumn('user_id','body');
+        // });
 
 
     }

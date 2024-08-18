@@ -16,6 +16,9 @@ class UserFactory extends Factory
      */
     protected static ?string $password;
 
+
+    // protected $model = Post::class;
+
     /**
      * Define the model's default state.
      *
