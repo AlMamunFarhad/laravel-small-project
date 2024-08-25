@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('posts', function (Blueprint $table) {
-      
-      // $table->dropUnique('title');      
-      
+        Schema::create('custom_model', function (Blueprint $table) {
+            $table->uuid('custom_id')->index()->primary();
+            $table->foreignIdFor(App\Models\User::class);
+            $table->string('name');
+            $table->timestamps();
         });
     }
 
@@ -23,9 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('posts', function (Blueprint $table) {
-            
-
-        });
+        Schema::dropIfExists('custom_model');
     }
 };

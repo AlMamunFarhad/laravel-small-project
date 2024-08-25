@@ -65,10 +65,10 @@ Route::get('/', function () {
   // $user->name = "My name is farhad.";
 
   // $user->save();
-  foreach(User::orderBy('created_at', 'desc')->get() as $user){
-    echo $user->name;
-   echo "<br>";
-  }
+  // foreach(User::orderBy('created_at', 'desc')->get() as $user){
+  //   echo $user->name;
+  //  echo "<br>";
+  // }
 
 
 
