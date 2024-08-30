@@ -16,7 +16,7 @@ return new class extends Migration
         //     $table->text('body')->after('title');
         // });
 
-            // Schema::connection('sqlite2')->create('users_2', function(Blueprint $table) {
+    //         Schema::connection('sqlite2')->create('users_2', function(Blueprint $table) {
     // $table->id();
     // $table->string('name','100');
     // $table->string('username', '100');

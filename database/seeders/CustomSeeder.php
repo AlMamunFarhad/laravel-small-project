@@ -4,7 +4,10 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\CostomModel;
+use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\User;
+use App\Models\CustomModel;
+// use Faker\Factory;
 
 class CustomSeeder extends Seeder
 {
@@ -13,6 +16,11 @@ class CustomSeeder extends Seeder
      */
     public function run(): void
     {
-        CostomModel::factory(10)->create();
+        // CustomModel::factory(10)->create();
+
+      // User::factory()->has(CustomModel::factory()->count(20))->create();
+       // User::factory()->has(Post::factory()->count(10))->create();
+
+      User::factory()->has(CustomModel::factory()->count(20))->create();
     }
 }
